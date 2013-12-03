@@ -28,6 +28,15 @@ module Codebreaker
 				expect {subject.guess(invalid_code)}.to raise_error
 			end
 		end
+		context "hint" do
+			it "should return a number from 1 to 6" do
+				expect(subject.give_hint).to match(/^[1-6]$/)
+			end
+			it "should reveal one random number of initial code" do
+				subject.code = "1234"
+				expect(subject.give_hint).to match(/^[1234]$/)
+			end
+		end
 		context "compare" do
 			before {subject.code = "1234"}
 			it "should fail if no match found" do 
@@ -49,15 +58,6 @@ module Codebreaker
 			it "should mark with 4 "+" for complete win" do 
 				subject.guess_code = "1234"
 				expect(subject.compare).to eq(["+","+","+","+"])
-			end
-		end
-		context "hint" do
-			it "should return a number from 1 to 6" do
-				expect(subject.give_hint).to match(/^[1-6]$/)
-			end
-			it "should reveal one random number of initial code" do
-				subject.code = "1234"
-				expect(subject.give_hint).to match(/^[1234]$/)
 			end
 		end
 	end

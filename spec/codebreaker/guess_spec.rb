@@ -6,7 +6,7 @@ module Codebreaker
 			let(:valid_guess) {Guess.new("1234")}
 			let(:invalid_guess) {Guess.new("12348")}
 
-			it "should validate data" do
+			it "should validate correct data" do
 				expect(valid_guess).to be_valid
 			end
 
