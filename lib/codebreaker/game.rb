@@ -17,7 +17,7 @@ module Codebreaker
         false
       end
     end
-    
+
     def guess(guess_code) 
       guess = Codebreaker::Guess.new(guess_code)
       if guess.valid?

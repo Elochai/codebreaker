@@ -16,7 +16,7 @@ A + indicates an exact match: one of the numbers in the guess is the same as one
 
 A - indicates a number match: one of the numbers in the guess is the same as one of the numbers in the secret code but in a different position.}
   spec.summary       = %q{Simple logic game based on numbers guessing :)}
-  spec.homepage      = "github.com/Elochai/codebreaker"
+  spec.homepage      = "https://github.com/Elochai/codebreaker.git"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

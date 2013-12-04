@@ -60,7 +60,6 @@ module Codebreaker
         subject.guess_code = "1525"
         expect(subject.compare).to eq(["+","-"])
       end
-      end
       it "should mark with 4 "+" for complete win" do 
         subject.guess_code = "1234"
         expect(subject.compare).to eq(["+","+","+","+"])
