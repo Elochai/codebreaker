@@ -7,7 +7,11 @@ module Codebreaker
     end
 
     def valid?
-      @code =~ /^[1-6]{4}$/
+      if @code =~ /^[1-6]{#{Code_length}}$/
+      	true
+      else
+      	false
+      end
     end
   end
 end
